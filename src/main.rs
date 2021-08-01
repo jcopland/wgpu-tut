@@ -136,7 +136,6 @@ fn main() {
                 }
             }
         }
-        _ => {}
         Event::RedrawRequested(_) => {
             state.update();
             match state.render() {
@@ -149,5 +148,6 @@ fn main() {
         Event::MainEventsCleared => {
             window.request_redraw();
         }
+        _ => {}
     });
 }
